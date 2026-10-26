@@ -1,0 +1,33 @@
+{
+  "official_root": "data/datasets_v1/datasets_v1_哈尔滨工业大学",
+  "synth_root": "data/synth",
+  "backbone": "models/dinov3-vith16plus",
+  "run_root": "runs/dinov3_hplus_v1",
+  "seed": 42,
+  "folds": 5,
+  "layers": [
+    8,
+    16,
+    24,
+    32
+  ],
+  "head_width": 128,
+  "crop_size": 768,
+  "stride": 576,
+  "batch_size": 4,
+  "inference_batch_size": 16,
+  "workers": 4,
+  "prepare_workers": 8,
+  "epochs": 20,
+  "steps_per_epoch": 200,
+  "eval_every": 5,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "warmup_steps": 100,
+  "source_weights": {
+    "abnormal": 2,
+    "synth": 1,
+    "normal": 1
+  },
+  "threshold": 0.5
+}
